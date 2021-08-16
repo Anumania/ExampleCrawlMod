@@ -7,15 +7,23 @@ using CrawlAPI;
 using UnityEngine;
 using System.IO;
 
+
 namespace ExampleCrawlMod
 {
+
     [BepInPlugin("org.anumania.plugins.exampleMod", "Example Mod", "1.0.0.0")]
     public class ExampleMod : BaseUnityPlugin
     {
+        void test()
+        {
+
+        }
         void Awake()
         {
             try
             {
+
+                var action = new Action(test);
                 //binted example for loading sprites and using them as animations. this setup will be replaced by some helper functions
                 //soon, but this is how i got custom sprites working on a monster.
                 /*
