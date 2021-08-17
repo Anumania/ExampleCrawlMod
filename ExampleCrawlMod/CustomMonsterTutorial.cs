@@ -14,16 +14,11 @@ namespace ExampleCrawlMod
     [BepInPlugin("org.anumania.plugins.exampleMod", "Example Mod", "1.0.0.0")]
     public class ExampleMod : BaseUnityPlugin
     {
-        void test()
-        {
-
-        }
-        void Awake()
+        [CrawlPlugin]
+        public void Start()
         {
             try
             {
-
-                var action = new Action(test);
                 //binted example for loading sprites and using them as animations. this setup will be replaced by some helper functions
                 //soon, but this is how i got custom sprites working on a monster.
                 /*
@@ -68,6 +63,7 @@ namespace ExampleCrawlMod
                 testman.SetToDefaults(); //sets all fields to that of the first deity
                 testman.m_name = "Greg";
                 testman.m_textFlavour = "Bow before greg";
+                testman.m_text = "this is my description";
 
                 CustomMonster testMonster = new CustomMonster(); //entirely blank custom monster
                 testMonster.SetToDefaults(); //sets everything to that of the "ghoul" enemy, and sets all evolves to gnomes
