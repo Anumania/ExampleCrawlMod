@@ -21,10 +21,10 @@ namespace ExampleCrawlMod
             {
                 //binted example for loading sprites and using them as animations. this setup will be replaced by some helper functions
                 //soon, but this is how i got custom sprites working on a monster.
-                /*
+                Console.WriteLine(Directory.GetCurrentDirectory());
                 exAtlas modAtlas = ScriptableObject.CreateInstance<exAtlas>();
                 Texture2D modAtlasTexture = new Texture2D(2048, 2048);
-                byte[] array2 = File.ReadAllBytes("./Crawl_Textures/test.png");
+                byte[] array2 = File.ReadAllBytes("./BepInEx/plugins/ExampleMod/test.png");
                 modAtlasTexture.LoadImage(array2);
                 Console.WriteLine("loaded!");
                 modAtlas.name = "modAtlasTexture";
@@ -58,7 +58,7 @@ namespace ExampleCrawlMod
                 monst.m_animationIdle.frameInfos[0].atlas.material = matthew;
 
                 monst.m_animationIdle.frameInfos[0].atlas.texture = modAtlasTexture;
-                */
+                
                 CustomDeity testman = new CustomDeity(); //entirely blank custom deity
                 testman.SetToDefaults(); //sets all fields to that of the first deity
                 testman.m_name = "Greg";
@@ -68,7 +68,7 @@ namespace ExampleCrawlMod
                 CustomMonster testMonster = new CustomMonster(); //entirely blank custom monster
                 testMonster.SetToDefaults(); //sets everything to that of the "ghoul" enemy, and sets all evolves to gnomes
 
-                testman.AddMonster(testMonster, 0); //you can either add custom monsters to custom deities
+                testman.AddMonster(monst, 0); //you can either add custom monsters to custom deities
 
                 //SystemDeity.GetDeity(1).AddMonster(testMonster, 0); //or real ones. (this will overwrite monsters) 
 
