@@ -72,10 +72,7 @@ namespace ExampleCrawlMod
 
                 //SystemDeity.GetDeity(1).AddMonster(testMonster, 0); //or real ones. (this will overwrite monsters) 
 
-
                 DeityAPI.AddDeity(testman); //add the deity (and monsters) to the mod deities menu
-
-
             }
             catch (Exception e)
             {
